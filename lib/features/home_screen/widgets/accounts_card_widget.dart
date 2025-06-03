@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pockit/common/themes.dart';
 import 'package:pockit/features/home_screen/widgets/account_card_info_widget.dart';
 
 class AccountsCardWidget extends StatelessWidget {
@@ -8,16 +7,17 @@ class AccountsCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 350,
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.black),
-      ),
+      height: 180,
+      width: 500,
+      decoration: BoxDecoration(border: Border.all(color: Colors.black)),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text("List of Accounts"),
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Text("List of Accounts", style: TextStyle(fontSize: 20)),
+          ),
           AccountCardInfoWidget(name: "Some Name", amount: 500.00),
         ],
       ),
